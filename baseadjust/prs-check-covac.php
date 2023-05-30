@@ -11,7 +11,7 @@ INNER JOIN
 (SELECT vn.hn,vn.vstdate FROM ".$database_hos.".ovst_vaccine ov
 INNER JOIN ".$database_hos.".vn_stat vn on vn.vn = ov.vn
 where vstdate BETWEEN '2019-10-01' AND CURDATE() AND ov.moph_update_result is not null
-)t on t.hn = pt.hn";
+)t on t.hn = pt.hn group by concat(pt.cid,t.vstdate) ";
 $result = $connection->query($sql);
 
 $api0 = new API("$url");
