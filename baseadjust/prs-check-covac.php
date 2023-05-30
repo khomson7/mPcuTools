@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
 
         $curl = curl_init();
        curl_setopt_array($curl, array(
-        CURLOPT_URL => "http://127.0.0.1:3011/configs/prscheckcovac",
+        CURLOPT_URL => "$url/configs/prscheckcovac",
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,
         CURLOPT_TIMEOUT => 0,
