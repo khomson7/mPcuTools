@@ -25,6 +25,8 @@ if ($result->num_rows > 0) {
         $vstdate = $row['vstdate'];
         $cid = $row['cid'];
 
+        echo '.' ;
+
         $curl = curl_init();
        curl_setopt_array($curl, array(
         CURLOPT_URL => "http://127.0.0.1:3011/configs/prscheckcovac",
